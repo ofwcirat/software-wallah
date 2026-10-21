@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn programming and software development with Software Wallah.">
+  <title>Software Wallah | Learn. Build. Grow.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Software Wallah home">
+      <span class="brand-mark">SW</span><span>Software <b>Wallah</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a class="active" href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#blog">Learning tips</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+      <a class="login-btn" href="#contact">Get started</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">LEARN <span>•</span> BUILD <span>•</span> GROW</p>
+        <h1>Your future in tech<br>starts <span>right here.</span></h1>
+        <p class="hero-description">Learn programming and software development in simple, practical steps. Build real skills at your own pace—one lesson at a time.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#courses">Explore courses <span>→</span></a><a class="btn btn-secondary" href="#about">Why learn with us?</a></div>
+        <div class="hero-proof"><div class="avatars"><span>👩🏻‍💻</span><span>👨🏽‍💻</span><span>👩🏽‍🎓</span></div><p><b>Start learning today</b><br><small>Beginner-friendly lessons and projects</small></p></div>
+      </div>
+      <div class="hero-art reveal" aria-label="Programming illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="code-window"><div class="window-dots"><i></i><i></i><i></i></div><code><span>const</span> future = {<br>&nbsp; skills: <em>"coding"</em>,<br>&nbsp; mindset: <em>"keep learning"</em><br>};<br><strong>buildYourFuture</strong>();</code></div>
+        <div class="student-card"><div class="student-head">👩🏻‍💻</div><div class="laptop"><span>&lt;/&gt;</span></div></div>
+        <div class="floating-tag tag-top">✦ Learn by doing</div><div class="floating-tag tag-bottom">⌘ Your next skill</div>
+        <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
+      </div>
+    </section>
+
+    <section class="stats section-wrap reveal" aria-label="Website highlights">
+      <div><strong>Beginner</strong><span>Friendly lessons</span></div><div><strong>Learn</strong><span>At your own pace</span></div><div><strong>Build</strong><span>Practical projects</span></div><div><strong>Grow</strong><span>Skills for tomorrow</span></div>
+    </section>
+
+    <section class="courses-section section-wrap" id="courses">
+      <div class="section-heading reveal"><div><p class="eyebrow">YOUR LEARNING PATH</p><h2>Explore popular courses</h2><p class="muted">Choose a skill and take your first step into tech.</p></div><span class="course-count" id="courseCount">8 courses</span></div>
+      <div class="filters reveal">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search Python, Java, HTML..." aria-label="Search courses"><button id="clearSearch" type="button" aria-label="Clear search">×</button></label>
+        <select id="categoryFilter" aria-label="Filter by category"><option value="all">All categories</option><option value="Programming">Programming</option><option value="Web Development">Web development</option><option value="Computer Science">Computer science</option><option value="Tools">Tools & productivity</option></select>
+        <select id="levelFilter" aria-label="Filter by level"><option value="all">All levels</option><option value="Beginner">Beginner</option><option value="Intermediate">Intermediate</option></select>
+      </div>
+      <div class="course-grid" id="courseGrid">
+        <article class="course-card reveal" data-title="Python Programming" data-category="Programming" data-level="Beginner" data-description="Learn Python from variables and loops to functions and mini projects." data-icon="🐍" data-color="mint" data-duration="4 weeks" data-lessons="18 lessons">
+          <div class="course-icon mint">🐍</div><span class="level">Beginner</span><h3>Python Programming</h3><p>Start coding with Python, from the basics to mini projects.</p><div class="course-meta"><span>◷ 4 weeks</span><span>▤ 18 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+        <article class="course-card reveal" data-title="C++ Programming" data-category="Programming" data-level="Beginner" data-description="Understand variables, conditions, loops, functions, classes and object-oriented programming." data-icon="💠" data-color="blue" data-duration="5 weeks" data-lessons="22 lessons">
+          <div class="course-icon blue">💠</div><span class="level">Beginner</span><h3>C++ Programming</h3><p>Build a strong foundation in logic and object-oriented programming.</p><div class="course-meta"><span>◷ 5 weeks</span><span>▤ 22 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+        <article class="course-card reveal" data-title="Web Development" data-category="Web Development" data-level="Beginner" data-description="Create responsive websites using HTML, CSS and JavaScript." data-icon="🌐" data-color="peach" data-duration="4 weeks" data-lessons="20 lessons">
+          <div class="course-icon peach">🌐</div><span class="level">Beginner</span><h3>Web Development</h3><p>Learn HTML, CSS and JavaScript to make your own websites.</p><div class="course-meta"><span>◷ 4 weeks</span><span>▤ 20 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+        <article class="course-card reveal" data-title="Java Programming" data-category="Programming" data-level="Intermediate" data-description="Learn Java syntax, classes, objects, inheritance and core OOP concepts." data-icon="☕" data-color="lavender" data-duration="6 weeks" data-lessons="26 lessons">
+          <div class="course-icon lavender">☕</div><span class="level level-intermediate">Intermediate</span><h3>Java Programming</h3><p>Explore Java fundamentals and object-oriented programming.</p><div class="course-meta"><span>◷ 6 weeks</span><span>▤ 26 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+        <article class="course-card reveal" data-title="Data Structures" data-category="Computer Science" data-level="Intermediate" data-description="Understand arrays, linked lists, stacks, queues, trees and searching." data-icon="🧩" data-color="yellow" data-duration="5 weeks" data-lessons="21 lessons">
+          <div class="course-icon yellow">🧩</div><span class="level level-intermediate">Intermediate</span><h3>Data Structures</h3><p>Understand how data is organised and processed efficiently.</p><div class="course-meta"><span>◷ 5 weeks</span><span>▤ 21 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+        <article class="course-card reveal" data-title="Software Engineering" data-category="Computer Science" data-level="Beginner" data-description="Study SDLC, software process models, requirements and testing basics." data-icon="⚙️" data-color="blue" data-duration="3 weeks" data-lessons="16 lessons">
+          <div class="course-icon blue">⚙️</div><span class="level">Beginner</span><h3>Software Engineering</h3><p>Learn SDLC, software models, planning and testing basics.</p><div class="course-meta"><span>◷ 3 weeks</span><span>▤ 16 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+        <article class="course-card reveal" data-title="Git & GitHub" data-category="Tools" data-level="Beginner" data-description="Track changes, manage code versions and share projects with GitHub." data-icon="🐙" data-color="peach" data-duration="1 week" data-lessons="8 lessons">
+          <div class="course-icon peach">🐙</div><span class="level">Beginner</span><h3>Git & GitHub</h3><p>Save code versions and share your projects confidently.</p><div class="course-meta"><span>◷ 1 week</span><span>▤ 8 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+        <article class="course-card reveal" data-title="Database Basics" data-category="Computer Science" data-level="Beginner" data-description="Learn tables, keys, relationships and the foundations of SQL." data-icon="🗄️" data-color="mint" data-duration="2 weeks" data-lessons="12 lessons">
+          <div class="course-icon mint">🗄️</div><span class="level">Beginner</span><h3>Database Basics</h3><p>Explore tables, keys, relationships and introductory SQL.</p><div class="course-meta"><span>◷ 2 weeks</span><span>▤ 12 lessons</span></div><button class="course-link" data-open-course>View course <span>→</span></button>
+        </article>
+      </div>
+      <div class="empty-state" id="emptyState" hidden><div>🔎</div><h3>No courses found</h3><p>Try another keyword or change the filters.</p><button class="btn btn-secondary" id="resetFilters">Reset filters</button></div>
+    </section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-panel reveal"><div class="about-copy"><p class="eyebrow">WHY SOFTWARE WALLAH?</p><h2>Learn simply.<br><span>Build confidently.</span></h2><p>Technology can feel complicated at first. We break concepts into manageable steps so you can understand the basics, practise consistently and grow with confidence.</p><a href="#courses" class="btn btn-primary">Find your course <span>→</span></a></div>
+        <div class="benefit-list"><div class="benefit"><span>01</span><div><h3>Clear explanations</h3><p>Learn concepts in simple, beginner-friendly language.</p></div></div><div class="benefit"><span>02</span><div><h3>Practice as you learn</h3><p>Turn theory into code with small projects and exercises.</p></div></div><div class="benefit"><span>03</span><div><h3>Learn at your pace</h3><p>Revisit topics and build skills one step at a time.</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="tips-section section-wrap" id="blog">
+      <div class="section-heading reveal"><div><p class="eyebrow">THE LEARNER'S CORNER</p><h2>Small tips. Big progress.</h2><p class="muted">Simple habits that make learning technology easier.</p></div></div>
+      <div class="tips-grid"><article class="tip-card reveal"><span>🗓️</span><h3>Be consistent</h3><p>Practise for 20–30 minutes regularly instead of cramming everything into one day.</p></article><article class="tip-card reveal"><span>⌨️</span><h3>Write the code</h3><p>Typing examples yourself helps you remember syntax and spot mistakes.</p></article><article class="tip-card reveal"><span>🚀</span><h3>Build something</h3><p>Make a small project after each topic to connect concepts with real use.</p></article></div>
+    </section>
+
+    <section class="cta-section section-wrap reveal" id="contact"><div><p class="eyebrow">READY TO BEGIN?</p><h2>Your next chapter starts with one line of code.</h2><p>Choose a topic, stay curious and keep building.</p></div><a class="btn btn-light" href="#courses">Browse courses <span>→</span></a></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">SW</span><span>Software <b>Wallah</b></span></a><p>Learn today. Build tomorrow.</p><div class="footer-links"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#contact">Contact</a></div><small>© <span id="year"></span> Software Wallah. Made for curious learners.</small></footer>
+
+  <dialog id="courseDialog" class="course-dialog"><button class="dialog-close" id="dialogClose" aria-label="Close dialog">×</button><div class="dialog-icon" id="dialogIcon">💻</div><p class="eyebrow">COURSE OVERVIEW</p><h2 id="dialogTitle">Course title</h2><p id="dialogDescription"></p><div class="dialog-facts"><span id="dialogDuration"></span><span id="dialogLessons"></span></div><h3>What you'll work on</h3><ul><li>Understand the core concepts step by step</li><li>Practise with short examples and exercises</li><li>Complete a small project to apply your learning</li></ul><button class="btn btn-primary" id="dialogDone">Sounds good</button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
